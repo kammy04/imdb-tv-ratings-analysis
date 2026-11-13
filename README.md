@@ -62,11 +62,12 @@ python src/prepare.py                 # ~2 min, downloads IMDb data on first run
 jupyter notebook notebooks/tv_ratings_analysis.ipynb
 ```
 
-## Limitations and next steps
+## Future work
 - **Self-selected ratings**: these are "how fans rate", not "how good it is". Survivorship bias shows up
   in the decade chart and in finale ratings.
-- **No studio data** in the IMDb datasets. Joining TMDB's `production_companies` would allow studio
-  comparisons (e.g. MAPPA vs Wit Studio vs Toei, or HBO vs Netflix).
+- **Studio comparisons.** The IMDb datasets don't include production companies, so studio trends
+  (e.g. MAPPA vs Wit Studio vs Toei, or HBO vs Netflix) aren't covered yet. The plan is to join TMDB's
+  API (`production_companies`) on IMDb ID.
 - Weighting by `numVotes` would reduce noise from thinly rated episodes.
 
 **Tech:** Python · pandas · PyArrow/Parquet · matplotlib · seaborn · Jupyter · Wikidata SPARQL
